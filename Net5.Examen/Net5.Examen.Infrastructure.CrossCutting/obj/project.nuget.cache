@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mgcJwynGu+mcKJvobyxz9Qp+ugMLE/hQtbsAsw1AHlmGHao6LOe+DHlWD53UQTIa/AqwY8apuYp3mRfrsiFpng==",
+  "dgSpecHash": "bbTPotZcqlyol15tgEF3THYy6usM4xlZkqlZvey7UFFgYDgjmMW0DYIZePUaH48/ksynuNvA6vpIhtOoZ59Cyg==",
   "success": true,
-  "projectFilePath": "M:\\NetCore\\ExamenFinal\\Net5.Examen\\Net5.Examen.Infrastructure.CrossCutting\\Net5.Examen.Infrastructure.CrossCutting.csproj",
+  "projectFilePath": "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.Infrastructure.CrossCutting\\Net5.Examen.Infrastructure.CrossCutting.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

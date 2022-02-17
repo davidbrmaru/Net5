@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "znPd5RE1BtoFlVGs93IzUp0pQkpQjzyBlGCwIHD5El+POvzwwg3qcVDqoMrP9EJBJCMwFow6Qf6u2OA90+6MvA==",
+  "dgSpecHash": "OPKJnN8lWf5kATW5kz5Qiw+yKy8kXjMnGSE+ZAeFhs+UC20buIsjy0957ANovamrAWgZrjX6gDhA2wmfzqonew==",
   "success": true,
-  "projectFilePath": "M:\\NetCore\\ExamenFinal\\Net5.Examen\\Net5.Examen.Infrastructure.Data\\Net5.Examen.Infrastructure.Data.csproj",
+  "projectFilePath": "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.Infrastructure.Data\\Net5.Examen.Infrastructure.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DAVID\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\DAVID\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

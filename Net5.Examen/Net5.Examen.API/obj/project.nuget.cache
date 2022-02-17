@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6qfP0rKioYIy6ZswWNugqBf60a2N91yvRTsMIHSgdq8+zVqNCuUc5m0FAUyyTNP3ywUjH+mYStEks3Q8+TaLZA==",
+  "dgSpecHash": "X1U6ZvQoNREhQFdLVvVkoynbE6DlMszki7ghHWpyK516y40bXINnU3Av0bS7NytSQHBRXBrs9R3fWKTohd33jA==",
   "success": true,
-  "projectFilePath": "M:\\NetCore\\ExamenFinal\\Net5.Examen\\Net5.Examen.API\\Net5.Examen.API.csproj",
+  "projectFilePath": "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.API\\Net5.Examen.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DAVID\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\DAVID\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

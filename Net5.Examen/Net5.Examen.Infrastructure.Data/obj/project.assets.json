@@ -5757,11 +5757,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "M:\\NetCore\\ExamenFinal\\Net5.Examen\\Net5.Examen.Infrastructure.Data\\Net5.Examen.Infrastructure.Data.csproj",
+      "projectUniqueName": "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.Infrastructure.Data\\Net5.Examen.Infrastructure.Data.csproj",
       "projectName": "Net5.Examen.Infrastructure.Data",
-      "projectPath": "M:\\NetCore\\ExamenFinal\\Net5.Examen\\Net5.Examen.Infrastructure.Data\\Net5.Examen.Infrastructure.Data.csproj",
+      "projectPath": "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.Infrastructure.Data\\Net5.Examen.Infrastructure.Data.csproj",
       "packagesPath": "C:\\Users\\DAVID\\.nuget\\packages\\",
-      "outputPath": "M:\\NetCore\\ExamenFinal\\Net5.Examen\\Net5.Examen.Infrastructure.Data\\obj\\",
+      "outputPath": "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.Infrastructure.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

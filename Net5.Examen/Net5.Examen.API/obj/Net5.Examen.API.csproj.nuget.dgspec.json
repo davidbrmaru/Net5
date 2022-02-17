@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "M:\\NetCore\\ExamenFinal\\Net5.Examen\\Net5.Examen.API\\Net5.Examen.API.csproj": {}
+    "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.API\\Net5.Examen.API.csproj": {}
   },
   "projects": {
-    "M:\\NetCore\\ExamenFinal\\Net5.Examen\\Net5.Examen.API\\Net5.Examen.API.csproj": {
+    "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.API\\Net5.Examen.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "M:\\NetCore\\ExamenFinal\\Net5.Examen\\Net5.Examen.API\\Net5.Examen.API.csproj",
+        "projectUniqueName": "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.API\\Net5.Examen.API.csproj",
         "projectName": "Net5.Examen.API",
-        "projectPath": "M:\\NetCore\\ExamenFinal\\Net5.Examen\\Net5.Examen.API\\Net5.Examen.API.csproj",
+        "projectPath": "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.API\\Net5.Examen.API.csproj",
         "packagesPath": "C:\\Users\\DAVID\\.nuget\\packages\\",
-        "outputPath": "M:\\NetCore\\ExamenFinal\\Net5.Examen\\Net5.Examen.API\\obj\\",
+        "outputPath": "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,11 +32,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "M:\\NetCore\\ExamenFinal\\Net5.Examen\\Net5.Examen.Infrastructure.CrossCutting\\Net5.Examen.Infrastructure.CrossCutting.csproj": {
-                "projectPath": "M:\\NetCore\\ExamenFinal\\Net5.Examen\\Net5.Examen.Infrastructure.CrossCutting\\Net5.Examen.Infrastructure.CrossCutting.csproj"
+              "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.Infrastructure.CrossCutting\\Net5.Examen.Infrastructure.CrossCutting.csproj": {
+                "projectPath": "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.Infrastructure.CrossCutting\\Net5.Examen.Infrastructure.CrossCutting.csproj"
               },
-              "M:\\NetCore\\ExamenFinal\\Net5.Examen\\Net5.Examen.Infrastructure.Data\\Net5.Examen.Infrastructure.Data.csproj": {
-                "projectPath": "M:\\NetCore\\ExamenFinal\\Net5.Examen\\Net5.Examen.Infrastructure.Data\\Net5.Examen.Infrastructure.Data.csproj"
+              "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.Infrastructure.Data\\Net5.Examen.Infrastructure.Data.csproj": {
+                "projectPath": "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.Infrastructure.Data\\Net5.Examen.Infrastructure.Data.csproj"
               }
             }
           }
@@ -120,14 +120,14 @@
         }
       }
     },
-    "M:\\NetCore\\ExamenFinal\\Net5.Examen\\Net5.Examen.Infrastructure.CrossCutting\\Net5.Examen.Infrastructure.CrossCutting.csproj": {
+    "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.Infrastructure.CrossCutting\\Net5.Examen.Infrastructure.CrossCutting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "M:\\NetCore\\ExamenFinal\\Net5.Examen\\Net5.Examen.Infrastructure.CrossCutting\\Net5.Examen.Infrastructure.CrossCutting.csproj",
+        "projectUniqueName": "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.Infrastructure.CrossCutting\\Net5.Examen.Infrastructure.CrossCutting.csproj",
         "projectName": "Net5.Examen.Infrastructure.CrossCutting",
-        "projectPath": "M:\\NetCore\\ExamenFinal\\Net5.Examen\\Net5.Examen.Infrastructure.CrossCutting\\Net5.Examen.Infrastructure.CrossCutting.csproj",
+        "projectPath": "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.Infrastructure.CrossCutting\\Net5.Examen.Infrastructure.CrossCutting.csproj",
         "packagesPath": "C:\\Users\\DAVID\\.nuget\\packages\\",
-        "outputPath": "M:\\NetCore\\ExamenFinal\\Net5.Examen\\Net5.Examen.Infrastructure.CrossCutting\\obj\\",
+        "outputPath": "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.Infrastructure.CrossCutting\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -178,14 +178,14 @@
         }
       }
     },
-    "M:\\NetCore\\ExamenFinal\\Net5.Examen\\Net5.Examen.Infrastructure.Data\\Net5.Examen.Infrastructure.Data.csproj": {
+    "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.Infrastructure.Data\\Net5.Examen.Infrastructure.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "M:\\NetCore\\ExamenFinal\\Net5.Examen\\Net5.Examen.Infrastructure.Data\\Net5.Examen.Infrastructure.Data.csproj",
+        "projectUniqueName": "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.Infrastructure.Data\\Net5.Examen.Infrastructure.Data.csproj",
         "projectName": "Net5.Examen.Infrastructure.Data",
-        "projectPath": "M:\\NetCore\\ExamenFinal\\Net5.Examen\\Net5.Examen.Infrastructure.Data\\Net5.Examen.Infrastructure.Data.csproj",
+        "projectPath": "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.Infrastructure.Data\\Net5.Examen.Infrastructure.Data.csproj",
         "packagesPath": "C:\\Users\\DAVID\\.nuget\\packages\\",
-        "outputPath": "M:\\NetCore\\ExamenFinal\\Net5.Examen\\Net5.Examen.Infrastructure.Data\\obj\\",
+        "outputPath": "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.Infrastructure.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

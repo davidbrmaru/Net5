@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "M:\\NetCore\\ExamenFinal\\Net5.Examen\\Net5.Examen.Client\\Net5.Examen.Client.csproj",
+      "projectUniqueName": "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.Client\\Net5.Examen.Client.csproj",
       "projectName": "Net5.Examen.Client",
-      "projectPath": "M:\\NetCore\\ExamenFinal\\Net5.Examen\\Net5.Examen.Client\\Net5.Examen.Client.csproj",
+      "projectPath": "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.Client\\Net5.Examen.Client.csproj",
       "packagesPath": "C:\\Users\\DAVID\\.nuget\\packages\\",
-      "outputPath": "M:\\NetCore\\ExamenFinal\\Net5.Examen\\Net5.Examen.Client\\obj\\",
+      "outputPath": "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.Client\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
