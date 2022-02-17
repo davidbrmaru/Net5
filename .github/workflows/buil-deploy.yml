@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  build-deploy-api:
 
     runs-on: ubuntu-latest
 
@@ -18,4 +18,34 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Build
-      run: dotnet build "./Net5.Examen/Net5.Examen.API" --configuration Release
+      run: dotnet build "./Net5.Examen/Net5.Examen.API" --configuration Release      
+    - name: Publish
+      run: dotnet publish "./Net5.Examen/Net5.Examen.API" --configuration -c Release -o Api      
+    - name: run Azure app service deploy
+      uses: Azure/webapps-deploy@v2
+      with:
+        app-name: net5-examen-api
+        publish-profile: ${{ secrets.NET5_EXAMEN_API }}
+        package: ./Api
+        
+      
+  build-deploy-client:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    - name: Build
+      run: dotnet build "./Net5.Examen/Net5.Examen.Client" --configuration Release 
+    - name: Publish
+      run: dotnet publish "./Net5.Examen/Net5.Examen.Client" --configuration -c Release -o Client      
+    - name: run Azure client service deploy
+      uses: Azure/webapps-deploy@v2
+      with:
+        app-name: net5-examen-client
+        publish-profile: ${{ secrets.NET5_EXAMEN_CLIENT }}
+        package: ./Client
