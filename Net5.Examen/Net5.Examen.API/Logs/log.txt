@@ -1139,3 +1139,160 @@ VALUES (@p0, @p1, @p2, @p3, @p4),
 2022-02-16 23:03:45.346 -05:00 [INF] Application started. Press Ctrl+C to shut down.
 2022-02-16 23:03:45.346 -05:00 [INF] Hosting environment: Development
 2022-02-16 23:03:45.346 -05:00 [INF] Content root path: M:\NetCore\ExamenFinal\Net5.Examen\Net5.Examen.API
+2022-02-17 03:49:05.153 -05:00 [INF] Entity Framework Core 5.0.14 initialized 'StudentContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-02-17 03:49:05.351 -05:00 [INF] Executed DbCommand (150ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-02-17 03:49:05.513 -05:00 [INF] Executed DbCommand (151ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-02-17 03:49:05.656 -05:00 [INF] Executed DbCommand (141ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-02-17 03:49:05.804 -05:00 [INF] Executed DbCommand (148ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-02-17 03:49:05.963 -05:00 [INF] Executed DbCommand (145ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-02-17 03:49:05.984 -05:00 [INF] Applying migration '20220217084812_Init_Data'.
+2022-02-17 03:49:06.356 -05:00 [ERR] Failed executing DbCommand (189ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Student] (
+    [StudentId] uniqueidentifier NOT NULL DEFAULT ((newid())),
+    [FirstName] varchar(50) NOT NULL,
+    [MiddleName] varchar(50) NULL,
+    [LastNames] varchar(100) NOT NULL,
+    [Age] int NOT NULL,
+    CONSTRAINT [PK_Student] PRIMARY KEY ([StudentId])
+);
+2022-02-17 03:49:06.384 -05:00 [FTL] Application startup exception
+System.Exception: Could not resolve a service of type 'Net5.Examen.API.Infrastructure.Data.Contexts.StudentContext' for the parameter 'context' of method 'Configure' on type 'Net5.Examen.API.Startup'.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): There is already an object named 'Student' in the database.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at Net5.Examen.API.Infrastructure.Data.Contexts.StudentContext..ctor(DbContextOptions`1 options) in M:\NetCore\gitExamen\Net5\Net5.Examen\Net5.Examen.API\Infrastructure\Data\Contexts\StudentContext.cs:line 21
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+ClientConnectionId:4014a78c-2f91-4a19-a013-834f241002d6
+Error Number:2714,State:6,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass15_0.<UseStartup>b__1(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISServerSetupFilter.<>c__DisplayClass2_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.WebTools.BrowserLink.Net.HostingStartup.<>c__DisplayClass1_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.HostingStartup.<>c__DisplayClass1_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2022-02-17 03:52:39.273 -05:00 [INF] Entity Framework Core 5.0.14 initialized 'StudentContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-02-17 03:52:39.544 -05:00 [INF] Executed DbCommand (200ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-02-17 03:52:39.712 -05:00 [INF] Executed DbCommand (158ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-02-17 03:52:39.853 -05:00 [INF] Executed DbCommand (138ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-02-17 03:52:39.991 -05:00 [INF] Executed DbCommand (138ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-02-17 03:52:40.142 -05:00 [INF] Executed DbCommand (132ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-02-17 03:52:40.163 -05:00 [INF] No migrations were applied. The database is already up to date.
+2022-02-17 03:52:40.709 -05:00 [INF] Executed DbCommand (134ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StudentId], [s].[Age], [s].[FirstName], [s].[LastNames], [s].[MiddleName]
+FROM [Student] AS [s]
+2022-02-17 03:52:41.184 -05:00 [INF] Executed DbCommand (154ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (Size = 50) (DbType = AnsiString), @p3='?' (Size = 100) (DbType = AnsiString), @p4='?' (Size = 50) (DbType = AnsiString), @p5='?' (DbType = Guid), @p6='?' (DbType = Int32), @p7='?' (Size = 50) (DbType = AnsiString), @p8='?' (Size = 100) (DbType = AnsiString), @p9='?' (Size = 50) (DbType = AnsiString), @p10='?' (DbType = Guid), @p11='?' (DbType = Int32), @p12='?' (Size = 50) (DbType = AnsiString), @p13='?' (Size = 100) (DbType = AnsiString), @p14='?' (Size = 50) (DbType = AnsiString), @p15='?' (DbType = Guid), @p16='?' (DbType = Int32), @p17='?' (Size = 50) (DbType = AnsiString), @p18='?' (Size = 100) (DbType = AnsiString), @p19='?' (Size = 50) (DbType = AnsiString), @p20='?' (DbType = Guid), @p21='?' (DbType = Int32), @p22='?' (Size = 50) (DbType = AnsiString), @p23='?' (Size = 100) (DbType = AnsiString), @p24='?' (Size = 50) (DbType = AnsiString), @p25='?' (DbType = Guid), @p26='?' (DbType = Int32), @p27='?' (Size = 50) (DbType = AnsiString), @p28='?' (Size = 100) (DbType = AnsiString), @p29='?' (Size = 50) (DbType = AnsiString), @p30='?' (DbType = Guid), @p31='?' (DbType = Int32), @p32='?' (Size = 50) (DbType = AnsiString), @p33='?' (Size = 100) (DbType = AnsiString), @p34='?' (Size = 50) (DbType = AnsiString), @p35='?' (DbType = Guid), @p36='?' (DbType = Int32), @p37='?' (Size = 50) (DbType = AnsiString), @p38='?' (Size = 100) (DbType = AnsiString), @p39='?' (Size = 50) (DbType = AnsiString), @p40='?' (DbType = Guid), @p41='?' (DbType = Int32), @p42='?' (Size = 50) (DbType = AnsiString), @p43='?' (Size = 100) (DbType = AnsiString), @p44='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Student] ([StudentId], [Age], [FirstName], [LastNames], [MiddleName])
+VALUES (@p0, @p1, @p2, @p3, @p4),
+(@p5, @p6, @p7, @p8, @p9),
+(@p10, @p11, @p12, @p13, @p14),
+(@p15, @p16, @p17, @p18, @p19),
+(@p20, @p21, @p22, @p23, @p24),
+(@p25, @p26, @p27, @p28, @p29),
+(@p30, @p31, @p32, @p33, @p34),
+(@p35, @p36, @p37, @p38, @p39),
+(@p40, @p41, @p42, @p43, @p44);
+2022-02-17 03:52:41.556 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-17 03:52:41.556 -05:00 [INF] Hosting environment: Development
+2022-02-17 03:52:41.557 -05:00 [INF] Content root path: M:\NetCore\gitExamen\Net5\Net5.Examen\Net5.Examen.API
+2022-02-17 03:52:41.693 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:58290/swagger/index.html - -
+2022-02-17 03:52:42.493 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:58290/_framework/aspnetcore-browser-refresh.js - -
+2022-02-17 03:52:42.590 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:58290/swagger/index.html - - - 200 - text/html;charset=utf-8 899.9411ms
+2022-02-17 03:52:42.592 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:58290/_framework/aspnetcore-browser-refresh.js - - - 200 11949 application/javascript;+charset=utf-8 95.1699ms
+2022-02-17 03:52:42.831 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:58290/swagger/v1/swagger.json - -
+2022-02-17 03:52:42.928 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:58290/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 96.9888ms
+2022-02-17 03:52:50.968 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:58290/api/Students - -
+2022-02-17 03:52:50.972 -05:00 [WRN] Failed to determine the https port for redirect.
+2022-02-17 03:52:51.010 -05:00 [INF] Executing endpoint 'Net5.Examen.API.Controllers.StudentsController.GetStudentsAsync (Net5.Examen.API)'
+2022-02-17 03:52:51.038 -05:00 [INF] Route matched with {action = "GetStudents", controller = "Students"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[Net5.Examen.API.Infrastructure.Data.Entities.Student]] GetStudentsAsync() on controller Net5.Examen.API.Controllers.StudentsController (Net5.Examen.API).
+2022-02-17 03:52:51.041 -05:00 [INF] Entity Framework Core 5.0.14 initialized 'StudentContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-02-17 03:52:51.174 -05:00 [INF] Executed DbCommand (132ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-02-17 03:52:51.310 -05:00 [INF] Executed DbCommand (136ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-02-17 03:52:51.445 -05:00 [INF] Executed DbCommand (135ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-02-17 03:52:51.614 -05:00 [INF] Executed DbCommand (168ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-02-17 03:52:51.779 -05:00 [INF] Executed DbCommand (162ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-02-17 03:52:51.779 -05:00 [INF] No migrations were applied. The database is already up to date.
+2022-02-17 03:52:51.782 -05:00 [WRN] Log From GetStudents method
+2022-02-17 03:52:51.785 -05:00 [WRN] Another message generated by David - Today is 2022-02-17 and I'm talking about ["C#",".NET","logging"]
+2022-02-17 03:52:51.972 -05:00 [INF] Executed DbCommand (164ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StudentId], [s].[Age], [s].[FirstName], [s].[LastNames], [s].[MiddleName]
+FROM [Student] AS [s]
+2022-02-17 03:52:51.997 -05:00 [INF] HTTP GET: Called get method of Student Controller
+2022-02-17 03:52:52.006 -05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Net5.Examen.API.Infrastructure.Data.Entities.Student, Net5.Examen.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-17 03:52:52.023 -05:00 [INF] Executed action Net5.Examen.API.Controllers.StudentsController.GetStudentsAsync (Net5.Examen.API) in 979.2705ms
+2022-02-17 03:52:52.024 -05:00 [INF] Executed endpoint 'Net5.Examen.API.Controllers.StudentsController.GetStudentsAsync (Net5.Examen.API)'
+2022-02-17 03:52:52.025 -05:00 [INF] HTTP GET /api/Students responded 200 in 1018.5527 ms
+2022-02-17 03:52:52.028 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:58290/api/Students - - - 200 - application/json;+charset=utf-8 1060.1695ms
+2022-02-17 03:53:41.501 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:58290/api/Students/227682ea-3999-4276-8a12-d550eeb772f9 - -
+2022-02-17 03:53:41.502 -05:00 [INF] Executing endpoint 'Net5.Examen.API.Controllers.StudentsController.GetAsync (Net5.Examen.API)'
+2022-02-17 03:53:41.516 -05:00 [INF] Route matched with {action = "Get", controller = "Students"}. Executing controller action with signature System.Threading.Tasks.Task`1[Net5.Examen.API.Infrastructure.Data.Entities.Student] GetAsync(System.Guid) on controller Net5.Examen.API.Controllers.StudentsController (Net5.Examen.API).
+2022-02-17 03:53:41.555 -05:00 [INF] Entity Framework Core 5.0.14 initialized 'StudentContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-02-17 03:53:41.714 -05:00 [INF] Executed DbCommand (151ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-02-17 03:53:41.845 -05:00 [INF] Executed DbCommand (130ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-02-17 03:53:41.983 -05:00 [INF] Executed DbCommand (137ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-02-17 03:53:42.120 -05:00 [INF] Executed DbCommand (137ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-02-17 03:53:42.256 -05:00 [INF] Executed DbCommand (135ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-02-17 03:53:42.257 -05:00 [INF] No migrations were applied. The database is already up to date.
+2022-02-17 03:53:42.549 -05:00 [INF] Executed DbCommand (154ms) [Parameters=[@__studentId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[StudentId], [s].[Age], [s].[FirstName], [s].[LastNames], [s].[MiddleName]
+FROM [Student] AS [s]
+WHERE [s].[StudentId] = @__studentId_0
+2022-02-17 03:53:42.551 -05:00 [INF] Executing ObjectResult, writing value of type 'Net5.Examen.API.Infrastructure.Data.Entities.Student'.
+2022-02-17 03:53:42.552 -05:00 [INF] Executed action Net5.Examen.API.Controllers.StudentsController.GetAsync (Net5.Examen.API) in 1035.3209ms
+2022-02-17 03:53:42.552 -05:00 [INF] Executed endpoint 'Net5.Examen.API.Controllers.StudentsController.GetAsync (Net5.Examen.API)'
+2022-02-17 03:53:42.552 -05:00 [INF] HTTP GET /api/Students/227682ea-3999-4276-8a12-d550eeb772f9 responded 200 in 1049.9575 ms
+2022-02-17 03:53:42.552 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:58290/api/Students/227682ea-3999-4276-8a12-d550eeb772f9 - - - 200 - application/json;+charset=utf-8 1051.3804ms

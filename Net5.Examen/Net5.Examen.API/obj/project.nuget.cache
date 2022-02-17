@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "X1U6ZvQoNREhQFdLVvVkoynbE6DlMszki7ghHWpyK516y40bXINnU3Av0bS7NytSQHBRXBrs9R3fWKTohd33jA==",
+  "dgSpecHash": "udB26YH5j+caMMRYLYUJwsoe4+CxUNz8+SzyeoRT6bxkZhQ8SICaCdoq7ndNDllNi9XJmcrUX9NmsrXFHgMofg==",
   "success": true,
   "projectFilePath": "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.API\\Net5.Examen.API.csproj",
   "expectedPackageFiles": [
@@ -17,6 +17,7 @@
     "C:\\Users\\DAVID\\.nuget\\packages\\microsoft.entityframeworkcore.design\\5.0.14\\microsoft.entityframeworkcore.design.5.0.14.nupkg.sha512",
     "C:\\Users\\DAVID\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.14\\microsoft.entityframeworkcore.relational.5.0.14.nupkg.sha512",
     "C:\\Users\\DAVID\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.14\\microsoft.entityframeworkcore.sqlserver.5.0.14.nupkg.sha512",
+    "C:\\Users\\DAVID\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\5.0.14\\microsoft.entityframeworkcore.tools.5.0.14.nupkg.sha512",
     "C:\\Users\\DAVID\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\DAVID\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0\\microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
     "C:\\Users\\DAVID\\.nuget\\packages\\microsoft.extensions.configuration\\2.0.0\\microsoft.extensions.configuration.2.0.0.nupkg.sha512",

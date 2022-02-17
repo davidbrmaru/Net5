@@ -3,13 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net5.Examen.Infrastructure.Data", "Net5.Examen.Infrastructure.Data\Net5.Examen.Infrastructure.Data.csproj", "{7DC9807A-9F34-4630-B0D1-0C427594830C}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net5.Examen.API", "Net5.Examen.API\Net5.Examen.API.csproj", "{9A85650B-8F6E-4068-AADE-092341B919F0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net5.Examen.Infrastructure.CrossCutting", "Net5.Examen.Infrastructure.CrossCutting\Net5.Examen.Infrastructure.CrossCutting.csproj", "{FBA3D27D-B635-44A6-9BF1-252CF339CD0D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net5.Examen.Client", "Net5.Examen.Client\Net5.Examen.Client.csproj", "{62B17D53-B573-4930-8B64-181B45791DDA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net5.Examen.Client", "Net5.Examen.Client\Net5.Examen.Client.csproj", "{62B17D53-B573-4930-8B64-181B45791DDA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,18 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7DC9807A-9F34-4630-B0D1-0C427594830C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7DC9807A-9F34-4630-B0D1-0C427594830C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7DC9807A-9F34-4630-B0D1-0C427594830C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7DC9807A-9F34-4630-B0D1-0C427594830C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9A85650B-8F6E-4068-AADE-092341B919F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9A85650B-8F6E-4068-AADE-092341B919F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A85650B-8F6E-4068-AADE-092341B919F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A85650B-8F6E-4068-AADE-092341B919F0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FBA3D27D-B635-44A6-9BF1-252CF339CD0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FBA3D27D-B635-44A6-9BF1-252CF339CD0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FBA3D27D-B635-44A6-9BF1-252CF339CD0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FBA3D27D-B635-44A6-9BF1-252CF339CD0D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{62B17D53-B573-4930-8B64-181B45791DDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{62B17D53-B573-4930-8B64-181B45791DDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62B17D53-B573-4930-8B64-181B45791DDA}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -206,6 +206,18 @@
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
         }
       },
+      "Microsoft.EntityFrameworkCore.Tools/5.0.14": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "5.0.14"
+        },
+        "compile": {
+          "lib/netstandard2.1/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/_._": {}
+        }
+      },
       "Microsoft.Extensions.Caching.Abstractions/5.0.0": {
         "type": "package",
         "dependencies": {
@@ -2550,31 +2562,6 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
-      },
-      "Net5.Examen.Infrastructure.CrossCutting/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "compile": {
-          "bin/placeholder/Net5.Examen.Infrastructure.CrossCutting.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Net5.Examen.Infrastructure.CrossCutting.dll": {}
-        }
-      },
-      "Net5.Examen.Infrastructure.Data/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "5.0.14",
-          "Microsoft.EntityFrameworkCore.Relational": "5.0.14",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.14"
-        },
-        "compile": {
-          "bin/placeholder/Net5.Examen.Infrastructure.Data.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Net5.Examen.Infrastructure.Data.dll": {}
-        }
       }
     }
   },
@@ -2878,6 +2865,30 @@
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.xml",
         "microsoft.entityframeworkcore.sqlserver.5.0.14.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlserver.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Tools/5.0.14": {
+      "sha512": "6oa1d8+MhLK9NQSLbr5nd7oBlAQnpdcbW+X6ekFfFDOV59+8MbGfOdRpZmAHl5DkPNDzap5wua6gpovv2JjbnQ==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.tools/5.0.14",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.1/_._",
+        "microsoft.entityframeworkcore.tools.5.0.14.nupkg.sha512",
+        "microsoft.entityframeworkcore.tools.nuspec",
+        "tools/EntityFrameworkCore.PS2.psd1",
+        "tools/EntityFrameworkCore.PS2.psm1",
+        "tools/EntityFrameworkCore.psd1",
+        "tools/EntityFrameworkCore.psm1",
+        "tools/about_EntityFrameworkCore.help.txt",
+        "tools/init.ps1",
+        "tools/net461/any/ef.exe",
+        "tools/net461/win-x86/ef.exe",
+        "tools/netcoreapp2.0/any/ef.dll",
+        "tools/netcoreapp2.0/any/ef.runtimeconfig.json"
       ]
     },
     "Microsoft.Extensions.Caching.Abstractions/5.0.0": {
@@ -8301,16 +8312,6 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
-    },
-    "Net5.Examen.Infrastructure.CrossCutting/1.0.0": {
-      "type": "project",
-      "path": "../Net5.Examen.Infrastructure.CrossCutting/Net5.Examen.Infrastructure.CrossCutting.csproj",
-      "msbuildProject": "../Net5.Examen.Infrastructure.CrossCutting/Net5.Examen.Infrastructure.CrossCutting.csproj"
-    },
-    "Net5.Examen.Infrastructure.Data/1.0.0": {
-      "type": "project",
-      "path": "../Net5.Examen.Infrastructure.Data/Net5.Examen.Infrastructure.Data.csproj",
-      "msbuildProject": "../Net5.Examen.Infrastructure.Data/Net5.Examen.Infrastructure.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8319,8 +8320,7 @@
       "Microsoft.EntityFrameworkCore >= 5.0.14",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.14",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.14",
-      "Net5.Examen.Infrastructure.CrossCutting >= 1.0.0",
-      "Net5.Examen.Infrastructure.Data >= 1.0.0",
+      "Microsoft.EntityFrameworkCore.Tools >= 5.0.14",
       "Serilog.AspNetCore >= 5.0.0-dev-00259",
       "Serilog.Settings.Configuration >= 3.3.1-dev-00296",
       "Serilog.Sinks.File >= 5.0.1-dev-00947",
@@ -8361,14 +8361,7 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {
-            "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.Infrastructure.CrossCutting\\Net5.Examen.Infrastructure.CrossCutting.csproj": {
-              "projectPath": "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.Infrastructure.CrossCutting\\Net5.Examen.Infrastructure.CrossCutting.csproj"
-            },
-            "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.Infrastructure.Data\\Net5.Examen.Infrastructure.Data.csproj": {
-              "projectPath": "M:\\NetCore\\gitExamen\\Net5\\Net5.Examen\\Net5.Examen.Infrastructure.Data\\Net5.Examen.Infrastructure.Data.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -8396,6 +8389,12 @@
             "version": "[5.0.14, )"
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
+            "target": "Package",
+            "version": "[5.0.14, )"
+          },
+          "Microsoft.EntityFrameworkCore.Tools": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
             "target": "Package",
             "version": "[5.0.14, )"
           },

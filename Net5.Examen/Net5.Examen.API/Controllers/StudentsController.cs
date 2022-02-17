@@ -1,79 +1,69 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Net5.Examen.API.ApplicationServices;
-using Net5.Examen.Infrastructure.CrossCutting.Dtos;
+using Net5.Examen.API.Infrastructure.Data.Repositories;
+using Net5.Examen.API.Infrastructure.Data.Entities;
 using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Net5.Examen.API.Controllers
 {
-    [Route("api/students")]
+    [Route("api/[controller]")]
     [ApiController]
     public class StudentsController : ControllerBase
     {
-        private readonly ILibraryApplicationService _libraryApplicationService;
+        private readonly IStudentRepository _studentRepository;
         private readonly ILogger _logger;
 
         public StudentsController(
-            ILibraryApplicationService libraryApplicationService,
+            IStudentRepository studentRepository,
             ILogger<StudentsController> logger)
         {
-            _libraryApplicationService = libraryApplicationService;
+            _studentRepository = studentRepository;
             _logger = logger;
         }
 
         [HttpGet]
-        public IActionResult GetStudents([FromQuery] StudentsResourceParameters studentsResourceParameters)
+        public async Task<IEnumerable<Student>> GetStudentsAsync()
         {
             _logger.LogWarning("Log From GetStudents method");
+            var students = await _studentRepository.GetStudentsAsync();
             _logger.LogInformation("HTTP GET: Called get method of Student Controller");
-            return Ok(_libraryApplicationService.GetStudents(studentsResourceParameters));
+            return students;
         }
 
         [HttpGet("{id}", Name = "GetStudent")]
-        public IActionResult GetStudent(Guid id)
+        public async Task<Student> GetAsync(Guid id)
         {
-            _logger.LogWarning("Log From GetStudent");
-            return Ok(_libraryApplicationService.GetStudent(id));
+            return await _studentRepository.GetStudentByIdAsync(id);
         }
 
         [HttpPost]
-        public IActionResult CreateStudent([FromBody] StudentForCreationDto student)
+        public async Task<IActionResult> PostAsync([FromBody] Student student)
         {
-            _logger.LogWarning("Log From CreateStudents");
-            if (student == null)
-            {
-                return BadRequest();
-            }
-
-            var result = _libraryApplicationService.CreateStudent(student);
-            return CreatedAtRoute("GetStudent",new {id = result.StudentId}, result);
+            var result = await _studentRepository.InsertAsync(student);
+            return CreatedAtRoute("GetStudent", new { id = result.StudentId }, result);
         }
 
-        [HttpPut("{id}")]
-        public IActionResult UpdateStudent(Guid id,[FromBody] StudentForUpdateDto student)
-        {
-            _logger.LogWarning("Log From UpdateStudent");
-            if (student == null)
-            {
-                return BadRequest();
-            }
 
-            var result = _libraryApplicationService.UpdateStudent(id, student);
-            
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutAsync(Guid id, [FromBody] Student student)
+        {
+            var result = await _studentRepository.UpdateAsync(id, student);
             return Ok(result);
+
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteStudent(Guid id)
+        public async Task<IActionResult> DeleteAsync(Guid id)
         {
-            _logger.LogWarning("Log From DeleteStudent");
-            var result = _libraryApplicationService.DeleteStudent(id);
-
-            if(result == null)
+            var result = await _studentRepository.DeleteAsync(id);
+            if (result == null)
             {
                 return NotFound();
             }
+
             return NoContent();
         }
     }
