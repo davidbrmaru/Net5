@@ -1296,3 +1296,180 @@ WHERE [s].[StudentId] = @__studentId_0
 2022-02-17 03:53:42.552 -05:00 [INF] Executed endpoint 'Net5.Examen.API.Controllers.StudentsController.GetAsync (Net5.Examen.API)'
 2022-02-17 03:53:42.552 -05:00 [INF] HTTP GET /api/Students/227682ea-3999-4276-8a12-d550eeb772f9 responded 200 in 1049.9575 ms
 2022-02-17 03:53:42.552 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:58290/api/Students/227682ea-3999-4276-8a12-d550eeb772f9 - - - 200 - application/json;+charset=utf-8 1051.3804ms
+2022-02-17 10:30:09.606 -05:00 [INF] Entity Framework Core 5.0.14 initialized 'StudentContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-02-17 10:30:09.982 -05:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-02-17 10:30:10.166 -05:00 [INF] Executed DbCommand (171ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-02-17 10:30:10.314 -05:00 [INF] Executed DbCommand (145ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-02-17 10:30:10.458 -05:00 [INF] Executed DbCommand (143ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-02-17 10:30:10.691 -05:00 [INF] Executed DbCommand (190ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-02-17 10:30:10.747 -05:00 [INF] No migrations were applied. The database is already up to date.
+2022-02-17 10:30:11.649 -05:00 [INF] Executed DbCommand (139ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StudentId], [s].[Age], [s].[FirstName], [s].[LastNames], [s].[MiddleName]
+FROM [Student] AS [s]
+2022-02-17 10:30:12.263 -05:00 [INF] Executed DbCommand (173ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Guid), @p3='?' (DbType = Guid), @p4='?' (DbType = Guid), @p5='?' (DbType = Guid), @p6='?' (DbType = Guid), @p7='?' (DbType = Guid), @p8='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Student]
+WHERE [StudentId] = @p0;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Student]
+WHERE [StudentId] = @p1;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Student]
+WHERE [StudentId] = @p2;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Student]
+WHERE [StudentId] = @p3;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Student]
+WHERE [StudentId] = @p4;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Student]
+WHERE [StudentId] = @p5;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Student]
+WHERE [StudentId] = @p6;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Student]
+WHERE [StudentId] = @p7;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Student]
+WHERE [StudentId] = @p8;
+SELECT @@ROWCOUNT;
+2022-02-17 10:30:12.751 -05:00 [INF] Executed DbCommand (142ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (Size = 50) (DbType = AnsiString), @p3='?' (Size = 100) (DbType = AnsiString), @p4='?' (Size = 50) (DbType = AnsiString), @p5='?' (DbType = Guid), @p6='?' (DbType = Int32), @p7='?' (Size = 50) (DbType = AnsiString), @p8='?' (Size = 100) (DbType = AnsiString), @p9='?' (Size = 50) (DbType = AnsiString), @p10='?' (DbType = Guid), @p11='?' (DbType = Int32), @p12='?' (Size = 50) (DbType = AnsiString), @p13='?' (Size = 100) (DbType = AnsiString), @p14='?' (Size = 50) (DbType = AnsiString), @p15='?' (DbType = Guid), @p16='?' (DbType = Int32), @p17='?' (Size = 50) (DbType = AnsiString), @p18='?' (Size = 100) (DbType = AnsiString), @p19='?' (Size = 50) (DbType = AnsiString), @p20='?' (DbType = Guid), @p21='?' (DbType = Int32), @p22='?' (Size = 50) (DbType = AnsiString), @p23='?' (Size = 100) (DbType = AnsiString), @p24='?' (Size = 50) (DbType = AnsiString), @p25='?' (DbType = Guid), @p26='?' (DbType = Int32), @p27='?' (Size = 50) (DbType = AnsiString), @p28='?' (Size = 100) (DbType = AnsiString), @p29='?' (Size = 50) (DbType = AnsiString), @p30='?' (DbType = Guid), @p31='?' (DbType = Int32), @p32='?' (Size = 50) (DbType = AnsiString), @p33='?' (Size = 100) (DbType = AnsiString), @p34='?' (Size = 50) (DbType = AnsiString), @p35='?' (DbType = Guid), @p36='?' (DbType = Int32), @p37='?' (Size = 50) (DbType = AnsiString), @p38='?' (Size = 100) (DbType = AnsiString), @p39='?' (Size = 50) (DbType = AnsiString), @p40='?' (DbType = Guid), @p41='?' (DbType = Int32), @p42='?' (Size = 50) (DbType = AnsiString), @p43='?' (Size = 100) (DbType = AnsiString), @p44='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Student] ([StudentId], [Age], [FirstName], [LastNames], [MiddleName])
+VALUES (@p0, @p1, @p2, @p3, @p4),
+(@p5, @p6, @p7, @p8, @p9),
+(@p10, @p11, @p12, @p13, @p14),
+(@p15, @p16, @p17, @p18, @p19),
+(@p20, @p21, @p22, @p23, @p24),
+(@p25, @p26, @p27, @p28, @p29),
+(@p30, @p31, @p32, @p33, @p34),
+(@p35, @p36, @p37, @p38, @p39),
+(@p40, @p41, @p42, @p43, @p44);
+2022-02-17 10:30:13.892 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-17 10:30:13.892 -05:00 [INF] Hosting environment: Development
+2022-02-17 10:30:13.892 -05:00 [INF] Content root path: M:\NetCore\gitExamen\Net5\Net5.Examen\Net5.Examen.API
+2022-02-17 10:30:14.053 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:58290/swagger/index.html - -
+2022-02-17 10:30:15.033 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:58290/_framework/aspnetcore-browser-refresh.js - -
+2022-02-17 10:30:15.151 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:58290/swagger/index.html - - - 200 - text/html;charset=utf-8 1063.4399ms
+2022-02-17 10:30:15.153 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:58290/_framework/aspnetcore-browser-refresh.js - - - 200 11949 application/javascript;+charset=utf-8 77.5281ms
+2022-02-17 10:30:15.638 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:58290/swagger/v1/swagger.json - -
+2022-02-17 10:30:15.841 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:58290/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 202.2353ms
+2022-02-17 10:30:49.201 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:58290/health - -
+2022-02-17 10:30:49.315 -05:00 [WRN] Failed to determine the https port for redirect.
+2022-02-17 10:30:49.601 -05:00 [INF] HTTP GET /health responded 200 in 62.5724 ms
+2022-02-17 10:30:49.603 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:58290/health - - - 200 - text/plain 401.0704ms
+2022-02-17 10:30:49.789 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:58290/favicon.ico - -
+2022-02-17 10:30:49.790 -05:00 [INF] HTTP GET /favicon.ico responded 404 in 0.0926 ms
+2022-02-17 10:30:49.804 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:58290/favicon.ico - - - 404 - - 14.5311ms
+2022-02-17 10:52:03.485 -05:00 [INF] Entity Framework Core 5.0.14 initialized 'StudentContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-02-17 10:52:03.707 -05:00 [INF] Executed DbCommand (145ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-02-17 10:52:03.871 -05:00 [INF] Executed DbCommand (150ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-02-17 10:52:04.014 -05:00 [INF] Executed DbCommand (140ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-02-17 10:52:04.145 -05:00 [INF] Executed DbCommand (131ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-02-17 10:52:04.295 -05:00 [INF] Executed DbCommand (130ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-02-17 10:52:04.319 -05:00 [INF] No migrations were applied. The database is already up to date.
+2022-02-17 10:52:04.828 -05:00 [INF] Executed DbCommand (137ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StudentId], [s].[Age], [s].[FirstName], [s].[LastNames], [s].[MiddleName]
+FROM [Student] AS [s]
+2022-02-17 10:52:05.317 -05:00 [INF] Executed DbCommand (158ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Guid), @p3='?' (DbType = Guid), @p4='?' (DbType = Guid), @p5='?' (DbType = Guid), @p6='?' (DbType = Guid), @p7='?' (DbType = Guid), @p8='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Student]
+WHERE [StudentId] = @p0;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Student]
+WHERE [StudentId] = @p1;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Student]
+WHERE [StudentId] = @p2;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Student]
+WHERE [StudentId] = @p3;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Student]
+WHERE [StudentId] = @p4;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Student]
+WHERE [StudentId] = @p5;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Student]
+WHERE [StudentId] = @p6;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Student]
+WHERE [StudentId] = @p7;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Student]
+WHERE [StudentId] = @p8;
+SELECT @@ROWCOUNT;
+2022-02-17 10:52:05.802 -05:00 [INF] Executed DbCommand (138ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (Size = 50) (DbType = AnsiString), @p3='?' (Size = 100) (DbType = AnsiString), @p4='?' (Size = 50) (DbType = AnsiString), @p5='?' (DbType = Guid), @p6='?' (DbType = Int32), @p7='?' (Size = 50) (DbType = AnsiString), @p8='?' (Size = 100) (DbType = AnsiString), @p9='?' (Size = 50) (DbType = AnsiString), @p10='?' (DbType = Guid), @p11='?' (DbType = Int32), @p12='?' (Size = 50) (DbType = AnsiString), @p13='?' (Size = 100) (DbType = AnsiString), @p14='?' (Size = 50) (DbType = AnsiString), @p15='?' (DbType = Guid), @p16='?' (DbType = Int32), @p17='?' (Size = 50) (DbType = AnsiString), @p18='?' (Size = 100) (DbType = AnsiString), @p19='?' (Size = 50) (DbType = AnsiString), @p20='?' (DbType = Guid), @p21='?' (DbType = Int32), @p22='?' (Size = 50) (DbType = AnsiString), @p23='?' (Size = 100) (DbType = AnsiString), @p24='?' (Size = 50) (DbType = AnsiString), @p25='?' (DbType = Guid), @p26='?' (DbType = Int32), @p27='?' (Size = 50) (DbType = AnsiString), @p28='?' (Size = 100) (DbType = AnsiString), @p29='?' (Size = 50) (DbType = AnsiString), @p30='?' (DbType = Guid), @p31='?' (DbType = Int32), @p32='?' (Size = 50) (DbType = AnsiString), @p33='?' (Size = 100) (DbType = AnsiString), @p34='?' (Size = 50) (DbType = AnsiString), @p35='?' (DbType = Guid), @p36='?' (DbType = Int32), @p37='?' (Size = 50) (DbType = AnsiString), @p38='?' (Size = 100) (DbType = AnsiString), @p39='?' (Size = 50) (DbType = AnsiString), @p40='?' (DbType = Guid), @p41='?' (DbType = Int32), @p42='?' (Size = 50) (DbType = AnsiString), @p43='?' (Size = 100) (DbType = AnsiString), @p44='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Student] ([StudentId], [Age], [FirstName], [LastNames], [MiddleName])
+VALUES (@p0, @p1, @p2, @p3, @p4),
+(@p5, @p6, @p7, @p8, @p9),
+(@p10, @p11, @p12, @p13, @p14),
+(@p15, @p16, @p17, @p18, @p19),
+(@p20, @p21, @p22, @p23, @p24),
+(@p25, @p26, @p27, @p28, @p29),
+(@p30, @p31, @p32, @p33, @p34),
+(@p35, @p36, @p37, @p38, @p39),
+(@p40, @p41, @p42, @p43, @p44);
+2022-02-17 10:52:06.116 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-17 10:52:06.117 -05:00 [INF] Hosting environment: Development
+2022-02-17 10:52:06.117 -05:00 [INF] Content root path: M:\NetCore\gitExamen\Net5\Net5.Examen\Net5.Examen.API
+2022-02-17 10:52:06.158 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:58290/swagger/index.html - -
+2022-02-17 10:52:06.464 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:58290/swagger/index.html - - - 200 - text/html;charset=utf-8 308.2491ms
+2022-02-17 10:52:06.558 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:58290/_framework/aspnetcore-browser-refresh.js - -
+2022-02-17 10:52:06.567 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:58290/_framework/aspnetcore-browser-refresh.js - - - 200 11949 application/javascript;+charset=utf-8 6.3119ms
+2022-02-17 10:52:06.955 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:58290/swagger/v1/swagger.json - -
+2022-02-17 10:52:07.062 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:58290/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 106.1954ms
+2022-02-17 10:54:13.065 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:58290/health - -
+2022-02-17 10:54:13.077 -05:00 [WRN] Failed to determine the https port for redirect.
+2022-02-17 10:54:13.183 -05:00 [INF] Entity Framework Core 5.0.14 initialized 'StudentContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-02-17 10:54:13.328 -05:00 [INF] Executed DbCommand (144ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-02-17 10:54:13.468 -05:00 [INF] Executed DbCommand (139ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-02-17 10:54:13.615 -05:00 [INF] Executed DbCommand (146ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-02-17 10:54:13.753 -05:00 [INF] Executed DbCommand (138ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-02-17 10:54:13.896 -05:00 [INF] Executed DbCommand (139ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-02-17 10:54:13.897 -05:00 [INF] No migrations were applied. The database is already up to date.
+2022-02-17 10:54:14.076 -05:00 [INF] Executed DbCommand (139ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-02-17 10:54:14.306 -05:00 [INF] HTTP GET /health responded 200 in 1188.2009 ms
+2022-02-17 10:54:14.308 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:58290/health - - - 200 - application/json 1243.5802ms

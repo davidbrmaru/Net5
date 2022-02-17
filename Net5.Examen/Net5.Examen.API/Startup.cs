@@ -1,15 +1,19 @@
+using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Net5.Examen.API.Infrastructure.Data.Contexts;
 using Net5.Examen.API.Infrastructure.Data.Repositories;
+using Net5.Examen.API.Infrastructure.HealthChecks;
 using Serilog;
 using System;
 using System.Collections.Generic;
@@ -51,6 +55,13 @@ namespace Net5.Examen.API
             string connectionString = Configuration.GetConnectionString("StudentDBConnection");
             services.AddDbContext<StudentContext>(o => o.UseSqlServer(connectionString));
             services.AddScoped<IStudentRepository, StudentRepository>();
+
+            services.AddHealthChecks()
+                .AddDbContextCheck<StudentContext>()
+                .AddCheck("CatalogDB-Check", new SqlConnectionHealthCheck(connectionString), HealthStatus.Unhealthy, new string[] { "catalogdb" });
+
+            services.AddHealthChecksUI()
+                .AddInMemoryStorage();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -79,6 +90,14 @@ namespace Net5.Examen.API
             {
                 endpoints.MapControllers();
             });
+
+            app.UseHealthChecks("/health", new HealthCheckOptions()
+            {
+                Predicate = _ => true,
+                ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+            });
+
+            app.UseHealthChecksUI(config => config.UIPath = "/health-ui");
         }
     }
 }

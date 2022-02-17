@@ -20,7 +20,12 @@
       "ProjectGuid": "62b17d53-b573-4930-8b64-181b45791dda",
       "DisplayName": "Net5.Examen.Client",
       "ColorIndex": 3
+    },
+    "66197656-1e66-4e12-ba38-700dc45f1865": {
+      "ProjectGuid": "66197656-1e66-4e12-ba38-700dc45f1865",
+      "DisplayName": "Net5.Examen.TestNUnit",
+      "ColorIndex": 4
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 5
 }
