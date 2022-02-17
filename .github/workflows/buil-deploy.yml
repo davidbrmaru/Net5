@@ -25,7 +25,7 @@ jobs:
       uses: Azure/webapps-deploy@v2
       with:
         app-name: net5-examen-api
-        publish-profile: ${{ NET5_EXAMEN_API }}
+        publish-profile: ${{ secrets.NET5_EXAMEN_API }}
         package: ./Api
         
       
