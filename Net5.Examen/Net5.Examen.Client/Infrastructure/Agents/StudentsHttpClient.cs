@@ -17,9 +17,9 @@ namespace Net5.Examen.Client.Infrastructure.Agents
             studentsApiUrl = configuration.GetSection("StudentUrl").Value;
             InitializeClient(httpClient);
         }
-        public async Task<List<Student>> GetStudentsAsync()
+        public async Task<List<StudentViewModel>> GetStudentsAsync()
         {
-            return await _httpClient.GetFromJsonAsync<List<Student>>("");
+            return await _httpClient.GetFromJsonAsync<List<StudentViewModel>>("");
         }
         private void InitializeClient(HttpClient httpClient)
         {

@@ -12,7 +12,7 @@ namespace Net5.Examen.Client.Infrastructure.Agents
             _client = client;
         }
 
-        public async Task<List<Student>> GetStudentsAsync()
+        public async Task<List<StudentViewModel>> GetStudentsAsync()
         {
             return await _client.GetStudentsAsync();
         }

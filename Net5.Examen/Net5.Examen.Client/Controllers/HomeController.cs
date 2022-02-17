@@ -23,7 +23,7 @@ namespace Net5.Examen.Client.Controllers
 
         public async Task<IActionResult> IndexAsync()
         {
-            List<Student> students = await _studentsAgent.GetStudentsAsync();
+            List<StudentViewModel> students = await _studentsAgent.GetStudentsAsync();
             return View(students);
         }
 

@@ -1,4 +1,4 @@
-﻿@model List<Student>
+﻿@model List<StudentViewModel>
 
 @{
     ViewData["Title"] = "Home Page";
@@ -16,7 +16,7 @@
         </tr>
     </thead>
     <tbody>
-    @foreach (Student student in Model)
+    @foreach (StudentViewModel student in Model)
     {
         <tr>
             <td>@student.StudentId</td>
