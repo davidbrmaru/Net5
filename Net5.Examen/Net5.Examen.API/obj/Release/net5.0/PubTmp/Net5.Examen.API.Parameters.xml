@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="net5-examen-api" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^M:\\NetCore\\ExamenFinal\\Net5\.Examen\\Net5\.Examen\.API\\obj\\Release\\net5\.0\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>

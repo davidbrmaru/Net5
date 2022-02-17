@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "7dc9807a-9f34-4630-b0d1-0c427594830c": {
+      "ProjectGuid": "7dc9807a-9f34-4630-b0d1-0c427594830c",
+      "DisplayName": "Net5.Examen.Infrastructure.Data",
+      "ColorIndex": 0
+    },
+    "9a85650b-8f6e-4068-aade-092341b919f0": {
+      "ProjectGuid": "9a85650b-8f6e-4068-aade-092341b919f0",
+      "DisplayName": "Net5.Examen.API",
+      "ColorIndex": 1
+    },
+    "fba3d27d-b635-44a6-9bf1-252cf339cd0d": {
+      "ProjectGuid": "fba3d27d-b635-44a6-9bf1-252cf339cd0d",
+      "DisplayName": "Net5.Examen.Infrastructure.CrossCutting",
+      "ColorIndex": 2
+    },
+    "62b17d53-b573-4930-8b64-181b45791dda": {
+      "ProjectGuid": "62b17d53-b573-4930-8b64-181b45791dda",
+      "DisplayName": "Net5.Examen.Client",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}
