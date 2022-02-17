@@ -1,4 +1,5 @@
-﻿@model IndexViewModel
+﻿@using Microsoft.AspNetCore.Identity
+@model IndexViewModel
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -7,25 +8,32 @@
     <h1 class="display-4">Welcome</h1>
 </div>
 
-<h4>Students List GIT</h4>
-<table class="table table-sm">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Title</th>
-            <th>Genre</th>
-            <th>Price</th>
-            <th>Release Date</th>
-        </tr>
-    </thead>
-    <tbody>
-    @foreach (StudentViewModel student in Model.Students)
-    {
-        @Html.Partial("_row",student)
-    }        
-    </tbody>
-</table>
 
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <h4>Students List GIT</h4>
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Genre</th>
+                <th>Price</th>
+                <th>Release Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (StudentViewModel student in Model.Students)
+            {
+                @Html.Partial("_row",student)
+            }        
+        </tbody>
+    </table>
+}
 @*@model List<StudentViewModel>
 
 @{
