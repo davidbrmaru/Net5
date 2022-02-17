@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net5.Examen.API", "Net5.Exa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net5.Examen.Client", "Net5.Examen.Client\Net5.Examen.Client.csproj", "{62B17D53-B573-4930-8B64-181B45791DDA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net5.Examen.TestNUnit", "Net5.Examen.TestNUnit\Net5.Examen.TestNUnit.csproj", "{66197656-1E66-4E12-BA38-700DC45F1865}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{62B17D53-B573-4930-8B64-181B45791DDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62B17D53-B573-4930-8B64-181B45791DDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62B17D53-B573-4930-8B64-181B45791DDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66197656-1E66-4E12-BA38-700DC45F1865}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66197656-1E66-4E12-BA38-700DC45F1865}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66197656-1E66-4E12-BA38-700DC45F1865}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66197656-1E66-4E12-BA38-700DC45F1865}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
