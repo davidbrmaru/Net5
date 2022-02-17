@@ -24,7 +24,14 @@ namespace Net5.Examen.Client.Controllers
         public async Task<IActionResult> IndexAsync()
         {
             List<StudentViewModel> students = await _studentsAgent.GetStudentsAsync();
-            return View(students);
+            IndexViewModel model = new IndexViewModel()
+            {
+                Students = students,
+                PageTitle = "Student List",
+                UserName = "David"
+            };
+
+            return View(model);
         }
 
         public IActionResult Privacy()

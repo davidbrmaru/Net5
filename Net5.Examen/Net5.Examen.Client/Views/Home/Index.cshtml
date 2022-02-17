@@ -1,4 +1,32 @@
-﻿@model List<StudentViewModel>
+﻿@model IndexViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+
+<h4>Students List GIT</h4>
+<table class="table table-sm">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Price</th>
+            <th>Release Date</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (StudentViewModel student in Model.Students)
+    {
+        @Html.Partial("_row",student)
+    }        
+    </tbody>
+</table>
+
+@*@model List<StudentViewModel>
 
 @{
     ViewData["Title"] = "Home Page";
@@ -27,4 +55,4 @@
         </tr>
     }        
     </tbody>
-</table>
+</table>*@

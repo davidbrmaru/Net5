@@ -200,3 +200,4 @@ M:\NetCore\gitExamen\Net5\Net5.Examen\Net5.Examen.Client\obj\Release\net5.0\Razo
 M:\NetCore\gitExamen\Net5\Net5.Examen\Net5.Examen.Client\obj\Release\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 M:\NetCore\gitExamen\Net5\Net5.Examen\Net5.Examen.Client\obj\Release\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 M:\NetCore\gitExamen\Net5\Net5.Examen\Net5.Examen.Client\obj\Release\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+M:\NetCore\gitExamen\Net5\Net5.Examen\Net5.Examen.Client\obj\Release\net5.0\Razor\Views\Shared\_row.cshtml.g.cs
