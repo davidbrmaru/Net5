@@ -18,7 +18,7 @@ namespace Net5.Examen.API.Infrastructure.Data.Contexts
         public StudentContext(DbContextOptions<StudentContext> options)
             : base(options)
         {
-            Database.Migrate();
+            //Database.Migrate();
         }
 
         public virtual DbSet<Student> Students { get; set; }

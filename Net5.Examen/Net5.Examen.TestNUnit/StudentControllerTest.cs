@@ -1,5 +1,6 @@
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using Net5.Examen.API.Controllers;
 using Net5.Examen.API.Infrastructure.Data.Contexts;
 using Net5.Examen.API.Infrastructure.Data.Entities;
@@ -21,13 +22,15 @@ namespace Net5.Examen.TestNUnit
 
         private StudentRepository _studentRepository;
         private StudentsController _controller;
+        private ILogger<StudentRepository> _logger;
+        private ILogger<StudentsController> _logger1;
 
         [OneTimeSetUp]
         public void Setup()
         {
             SeedDb();
-            _studentRepository = new StudentRepository(new StudentContext(_dbContextOptions), null);
-            _controller = new StudentsController(_studentRepository, null);
+            _studentRepository = new StudentRepository(new StudentContext(_dbContextOptions), _logger);
+            _controller = new StudentsController(_studentRepository, _logger1);
         }
 
         [Test]
@@ -42,7 +45,7 @@ namespace Net5.Examen.TestNUnit
         [Test]
         public async Task GetAsync()
         {
-            var result = await _controller.GetAsync(new Guid("f57706c5-da12-4cc2-af30-d28152705046"));
+            var result = await _controller.GetAsync(new Guid("b2031837-63a7-481b-b605-9723c84d1f6b"));
             var student = result.As<Student>();
             student.Should().NotBeNull();
             student.FirstName.Should().Be("David");

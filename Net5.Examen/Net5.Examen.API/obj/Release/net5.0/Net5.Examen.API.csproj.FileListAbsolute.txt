@@ -163,7 +163,6 @@ M:\NetCore\gitExamen\Net5\Net5.Examen\Net5.Examen.API\obj\Release\net5.0\staticw
 M:\NetCore\gitExamen\Net5\Net5.Examen\Net5.Examen.API\obj\Release\net5.0\Net5.Examen.API.RazorTargetAssemblyInfo.cache
 M:\NetCore\gitExamen\Net5\Net5.Examen\Net5.Examen.API\obj\Release\net5.0\Net5.Examen.API.csproj.CopyComplete
 M:\NetCore\gitExamen\Net5\Net5.Examen\Net5.Examen.API\obj\Release\net5.0\Net5.Examen.API.genruntimeconfig.cache
-M:\NetCore\gitExamen\Net5\Net5.Examen\Net5.Examen.API\obj\Release\net5.0\Net5.Examen.API.csproj.AssemblyReference.cache
 M:\NetCore\gitExamen\Net5\Net5.Examen\Net5.Examen.API\bin\Release\net5.0\HealthChecks.UI.Client.dll
 M:\NetCore\gitExamen\Net5\Net5.Examen\Net5.Examen.API\bin\Release\net5.0\HealthChecks.UI.Core.dll
 M:\NetCore\gitExamen\Net5\Net5.Examen\Net5.Examen.API\bin\Release\net5.0\Microsoft.Extensions.Diagnostics.HealthChecks.dll
